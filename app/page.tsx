@@ -16,17 +16,17 @@ const projects = [
     title: "Personal Portfolio Website",
     description: "A modern portfollio website built with Next.js and Tailwind.css to showcase projects and skills.",
     tech: ["Next.js", "Tailwind CSS", "React"],
-    github: "",
-    live: null,
-    status: "In Progress"
+    github: "https://github.com/EvxnXu/my-portfolio",
+    live: "https://evan-xu-portfolio.vercel.app/",
+    status: "Updating"
   }
 ];
 
 const skills = {
   languages: ["Python", "C", "C++", "C#", "JavaScript", "TypeScript", "Java"],
   frontend: ["React", "Next.js", "HTML/CSS", "Tailwind CSS"],
-  backend: ["Node.js", "Express", "REST APIs"],
-  databases: ["PostgreSQL", "SQLite",],
+  backend: ["Node.js", "REST APIs"],
+  databases: ["SQLite", "Microsoft SQL Server"],
   tools: ["Git", "GitHub", "VS Code", "Linux"]
 };
 
@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
-      <nav className="shadow-sm sticky top-0 z-50">
+      <nav className="bg-background/100 shadow-sm sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold">Evan Xu</h1>
@@ -59,7 +59,7 @@ export default function Home() {
           </p>
           <p className="text-lg max-w-2xl mx-auto mb-8">
             Passionate about building scalable backend systems and full-stack applications. 
-            Currently seeking entry-level SWE opportunities.
+            Currently seeking full time entry-level SWE opportunities.
           </p>
           <div className="flex gap-4 justify-center">
             <a 
@@ -86,21 +86,29 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-8 text-center">About Me</h2>
           <div className="max-w-3xl mx-auto">
             <p className="text-lg mb-4">
-              {"I'm a senior Computer Science student at the Unviersity of Masachusetts Lowell "} 
-              {"pursuing a B.S. degree in Computer Science with a minor in Mathematics."}
+              {`I'm a senior at UMass Lowell studying Computer Science with a Math minor. 
+              What drives me in software development is solving complex problems with 
+              clean, efficient code – whether it's designing APIs or optimizing algorithms.`}
             </p>
-            <p className="text-lg">
-              {"My experience includes working with Python, Java, and modern web technologies. "}
-              {"I'm particularly interested in backend and full-stack development as well as AI/ML."}
+            <p className="text-lg mb-4">
+              {`During my internship at Salary.com, I built a REST API for data import into 
+              SQL Server and developed a newsletter search solution, gaining hands-on 
+              experience with backend development and database architecture.`}
             </p>
+            <p className="text-lg mb-4">
+              {`I'm currently building full-stack projects with Next.js and exploring AI/ML 
+              applications. I'm seeking entry-level opportunities where I can contribute 
+              and grow as a backend or full-stack engineer.`}
+            </p>
+            
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20">
+      <section id="projects" className="py-20 bg-third">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Projects</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center">Projects</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project) => (
               <div 
@@ -144,7 +152,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:text-blue-800 transition"
                     >
-                      Live Demo →
+                      Link →
                     </a>
                   )}
                 </div>
@@ -231,9 +239,9 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-third">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8">Get In Touch</h2>
+          <h2 className="text-4xl font-bold mb-8">Get In Touch</h2>
           <p className="text-lg text-white mb-8 max-w-2xl mx-auto">
-            {"I'm currently looking for entry-level software engineering opportunities. "}            
+            {"I'm currently looking for full-time entry-level software engineering opportunities. "}            
             {"Feel free to reach out if you'd like to connect!"}
           </p>
           <div className="flex gap-6 justify-center">
