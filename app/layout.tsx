@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
+import { Geist, Geist_Mono } from 'next/font/google';
 import Footer from './components/footer'
 import Navbar from './components/nav'
-import "./globals.css";
+import './globals.css';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
         {/* Scrollable Main Content */}
         <main className="flex-1 max-w-4xl mx-auto px-4 w-fullb">
           {children}
+          <Analytics />
         </main>
 
         {/* Fixed Footer */}
